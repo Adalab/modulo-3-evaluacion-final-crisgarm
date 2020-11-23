@@ -1,15 +1,16 @@
-import React from "react";
-import "../stylesheets/App.css";
+import React, { useEffect, useState } from "react";
+import "../stylesheets/App.scss";
+import getDataFromApi from "../services/api";
 
-class App extends React.Component {
-  // eslint-disable-next-line
-  constructor(props) {
-    super(props);
-  }
+const App = () => {
+  const [characters, setCharacters] = useState([]);
+  useEffect(() => {
+    console.log("Me estoy montando");
+    getDataFromApi().then((data) => setCharacters(data));
+  }, []);
+  console.log(characters);
 
-  render() {
-    return <div className="App">Hola Cris</div>;
-  }
-}
+  return <div className="App">Hola Cris</div>;
+};
 
 export default App;
