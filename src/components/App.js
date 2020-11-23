@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../stylesheets/App.scss";
+import "../stylesheets/Form.scss";
 import getDataFromApi from "../services/api";
-import logo from "../images/logo-rick-morty.png";
+import Header from "./Header";
 import CharacterList from "./CharacterList";
 
 const App = () => {
@@ -12,13 +13,18 @@ const App = () => {
 
   return (
     <>
-      <header>
-        <img src={logo} />
-      </header>
+      <Header />
       <main>
-        <form>
-          <label htmlFor="search">Search:</label>
-          <input type="text" id="search" name="search" />
+        <form className="form">
+          <label className="form__label" htmlFor="search">
+            Search:
+          </label>
+          <input
+            type="text"
+            id="search"
+            name="search"
+            className="form__input"
+          />
         </form>
         <section>
           <CharacterList characters={characters} />
