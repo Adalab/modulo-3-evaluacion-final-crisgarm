@@ -40,7 +40,10 @@ const App = () => {
     <>
       <Header />
       <main>
-        <Filters handleFilterChange={handleFilterChange} />
+        <Filters
+          handleFilterChange={handleFilterChange}
+          nameFilter={nameFilter}
+        />
         <section>
           <CharacterList characters={filteredCharacters} />
         </section>
