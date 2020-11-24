@@ -7,25 +7,42 @@ import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 
 const App = () => {
-  //state
+  // STATES
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
-  const [speciesFilter, setSpeciesFilter] = useState("All");
+  const [speciesFilter, setSpeciesFilter] = useState("all");
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
 
-  //events
+  // EVENTS
   const handleFilterChange = (data) => {
-    console.log(data);
+    if (data.id === "name") {
+      setNameFilter(data.value);
+    } else if (data.id === "species") {
+      setSpeciesFilter(data.value);
+      console.log(data.id, data.value);
+    }
   };
+
+  // RENDER
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(nameFilter.toLowerCase());
+    })
+    .filter((character) => {
+      return speciesFilter === "all"
+        ? true
+        : character.species.toLowerCase() === speciesFilter;
+    });
+
   return (
     <>
       <Header />
       <main>
         <Filters handleFilterChange={handleFilterChange} />
         <section>
-          <CharacterList characters={characters} />
+          <CharacterList characters={filteredCharacters} />
         </section>
       </main>
     </>
