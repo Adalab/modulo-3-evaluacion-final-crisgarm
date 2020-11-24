@@ -60,11 +60,14 @@ const App = () => {
     const characters = [...newCharacters];
   }
   console.log(newCharacters, characters);
+
   const renderCharacterDetail = (props) => {
     const findCharacter = characters.find((character) => {
       return character.id === parseInt(props.match.params.id);
     });
-    return <CharacterDetail character={findCharacter} />;
+    if (findCharacter !== undefined) {
+      return <CharacterDetail character={findCharacter} />;
+    }
   };
 
   return (
