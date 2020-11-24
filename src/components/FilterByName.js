@@ -2,7 +2,10 @@ import React from "react";
 
 const FilterByName = (props) => {
   const handleInputChange = (ev) => {
-    props.handleInputChange(ev.target.value);
+    props.handleInputChange({
+      value: ev.target.value,
+      id: ev.target.id,
+    });
   };
 
   return (
