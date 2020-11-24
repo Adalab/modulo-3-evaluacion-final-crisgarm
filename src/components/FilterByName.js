@@ -1,8 +1,8 @@
 import React from "react";
 
 const FilterByName = (props) => {
-  const handleInputChange = (ev) => {
-    props.handleInputChange({
+  const handleFilterChange = (ev) => {
+    props.handleFilterChange({
       value: ev.target.value,
       id: ev.target.id,
     });
@@ -18,7 +18,7 @@ const FilterByName = (props) => {
         id="name"
         name="name"
         className="form__input"
-        onChange={handleInputChange}
+        onChange={handleFilterChange}
       />
     </>
   );

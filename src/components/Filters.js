@@ -5,8 +5,8 @@ import FilterBySpecies from "./FilterBySpecie";
 const Filters = (props) => {
   return (
     <form className="form">
-      <FilterByName handleInputChange={props.handleInputChange} />
-      <FilterBySpecies handleInputChange={props.handleInputChange} />
+      <FilterByName handleFilterChange={props.handleFilterChange} />
+      <FilterBySpecies handleFilterChange={props.handleFilterChange} />
     </form>
   );
 };

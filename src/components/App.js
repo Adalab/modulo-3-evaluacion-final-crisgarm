@@ -9,19 +9,21 @@ import Filters from "./Filters";
 const App = () => {
   //state
   const [characters, setCharacters] = useState([]);
+  const [nameFilter, setNameFilter] = useState("");
+  const [speciesFilter, setSpeciesFilter] = useState("All");
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
 
   //events
-  const handleInputChange = (data) => {
+  const handleFilterChange = (data) => {
     console.log(data);
   };
   return (
     <>
       <Header />
       <main>
-        <Filters handleInputChange={handleInputChange} />
+        <Filters handleFilterChange={handleFilterChange} />
         <section>
           <CharacterList characters={characters} />
         </section>
