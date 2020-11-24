@@ -49,14 +49,16 @@ const App = () => {
     <>
       <Header />
       <main>
-        <Filters
-          handleFilterChange={handleFilterChange}
-          nameFilter={nameFilter}
-        />
-        <section>
-          <CharacterList characters={filteredCharacters} />
-        </section>
         <Switch>
+          <Route exact path="/">
+            <Filters
+              handleFilterChange={handleFilterChange}
+              nameFilter={nameFilter}
+            />
+            <section>
+              <CharacterList characters={filteredCharacters} />
+            </section>
+          </Route>
           <Route path="/character/:id" render={renderCharacterDetail} />
         </Switch>
       </main>

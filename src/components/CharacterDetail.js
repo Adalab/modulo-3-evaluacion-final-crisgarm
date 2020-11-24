@@ -1,9 +1,10 @@
 import React from "react";
+import "../stylesheets/CharacterDetail.scss";
 
 const CharacterDetail = (props) => {
   console.log(props.character);
   return (
-    <div>
+    <article className="article">
       <img
         src={props.character.image}
         alt={"Imagen de " + props.character.name}
@@ -11,10 +12,10 @@ const CharacterDetail = (props) => {
       />
       <h2>{props.character.name}</h2>
       <p>Status:</p>
-      <p>Species:{props.character.species}</p>
+      <p>{`Species: ${props.character.species}`}</p>
       <p>Origin:</p>
       <p>Episodes:</p>
-    </div>
+    </article>
   );
 };
 
