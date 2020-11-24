@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../stylesheets/CharacterDetail.scss";
 
 const CharacterDetail = (props) => {
-  //console.log(parseInt(props.character.episodes.lenght));
   let status;
   if (props.character.status === "Dead") {
     status = "fas fa-skull-crossbones";
@@ -40,7 +39,7 @@ const CharacterDetail = (props) => {
             <i class={species}></i>
           </p>
           <p className="article__container--origin">{`Origin: ${props.character.origin}`}</p>
-          <p className="article__container--episodes">{`Episodes:${props.character.episodes.lenght}`}</p>
+          <p className="article__container--episodes">{`Episodes: ${props.character.episodes.length}`}</p>
         </div>
       </article>
       <Link to="/" className="article__link">
