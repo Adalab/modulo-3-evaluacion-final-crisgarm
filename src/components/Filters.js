@@ -1,4 +1,5 @@
 import React from "react";
+import FilterByAlphabeticalOrder from "./FilterByAlphabeticalOrder";
 import FilterByName from "./FilterByName";
 import FilterBySpecies from "./FilterBySpecie";
 
@@ -13,6 +14,7 @@ const Filters = (props) => {
         nameFilter={props.nameFilter}
       />
       <FilterBySpecies handleFilterChange={props.handleFilterChange} />
+      <FilterByAlphabeticalOrder handleCheckInput={props.handleCheckInput} />
     </form>
   );
 };

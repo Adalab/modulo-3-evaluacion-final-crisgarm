@@ -13,6 +13,7 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
   const [speciesFilter, setSpeciesFilter] = useState("all");
+  const [orderFilter, setOrderFilter] = useState(false);
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
@@ -26,6 +27,14 @@ const App = () => {
     }
   };
 
+  const handleCheckInput = (inputChecked) => {
+    if (inputChecked) {
+      setOrderFilter(true);
+    } else {
+      setOrderFilter(false);
+    }
+  };
+
   // RENDER
   const filteredCharacters = characters
     .filter((character) => {
@@ -36,7 +45,21 @@ const App = () => {
         ? true
         : character.species.toLowerCase() === speciesFilter;
     });
-
+  const newCharacters = [...characters];
+  if (orderFilter) {
+    characters.sort(function (prev, next) {
+      if (prev.name > next.name) {
+        return 1;
+      }
+      if (prev.name < next.name) {
+        return -1;
+      }
+      return 0;
+    });
+  } else {
+    const characters = [...newCharacters];
+  }
+  console.log(newCharacters, characters);
   const renderCharacterDetail = (props) => {
     const findCharacter = characters.find((character) => {
       return character.id === parseInt(props.match.params.id);
@@ -53,6 +76,7 @@ const App = () => {
             <Filters
               handleFilterChange={handleFilterChange}
               nameFilter={nameFilter}
+              handleCheckInput={handleCheckInput}
             />
             <section>
               <CharacterList characters={filteredCharacters} />
