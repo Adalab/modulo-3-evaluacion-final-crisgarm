@@ -23,7 +23,6 @@ const App = () => {
       setNameFilter(data.value);
     } else if (data.id === "species") {
       setSpeciesFilter(data.value);
-      console.log(data.id, data.value);
     }
   };
 

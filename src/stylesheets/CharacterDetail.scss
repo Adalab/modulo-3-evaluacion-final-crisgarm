@@ -1,3 +1,19 @@
 .article {
-  text-align: center;
+  background-color: #00b0c8;
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  &__container {
+    padding-left: 20px;
+    &--image {
+      width: 300px;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+  }
 }
