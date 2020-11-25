@@ -7,6 +7,7 @@ import Header from "./Header";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
+import Loading from "./Loading";
 
 const App = () => {
   // STATES
@@ -14,11 +15,18 @@ const App = () => {
   const [nameFilter, setNameFilter] = useState("");
   const [speciesFilter, setSpeciesFilter] = useState("all");
   const [orderFilter, setOrderFilter] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  //API
   useEffect(() => {
-    getDataFromApi().then((data) => setCharacters(data));
+    setIsLoading(true);
+    getDataFromApi().then((data) => {
+      setCharacters(data);
+      setIsLoading(false);
+    });
   }, []);
 
-  // EVENTS
+  // HANDLE EVENTS
   const handleFilterChange = (data) => {
     if (data.id === "name") {
       setNameFilter(data.value);
@@ -83,6 +91,7 @@ const App = () => {
 
   return (
     <>
+      {isLoading === true ? <Loading /> : null}
       <Header />
       <main>
         <Switch>
