@@ -1,8 +1,9 @@
 import React from "react";
 import CharacterCard from "./CharacterCard";
 import "../stylesheets/Characters.scss";
+import CharacterNotFound from "./CharacterNotFound";
 
-const ChracterList = (props) => {
+const CharacterList = (props) => {
   const characterItems = props.characters.map((character) => {
     return (
       <li key={character.id} className="characters__list">
@@ -11,7 +12,10 @@ const ChracterList = (props) => {
     );
   });
 
-  return <ul className="characters">{characterItems}</ul>;
+  return characterItems.length === 0 ? (
+    <CharacterNotFound />
+  ) : (
+    <ul className="characters">{characterItems}</ul>
+  );
 };
-
-export default ChracterList;
+export default CharacterList;

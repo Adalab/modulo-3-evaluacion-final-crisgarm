@@ -62,7 +62,7 @@ CharacterDetail.defaultProps = {
   image:
     "https://raw.githubusercontent.com/Adalab/rick-y-morty/master/assets/img/19.jpeg",
   origin: "Unknown",
-  episodes: "Unknown",
+  episodes: 0,
 };
 
 CharacterDetail.propTypes = {
