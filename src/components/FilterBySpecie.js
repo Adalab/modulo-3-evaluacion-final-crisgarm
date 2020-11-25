@@ -12,7 +12,7 @@ const FilterBySpecies = (props) => {
       <select
         name="species"
         id="species"
-        className="form__input"
+        className="form__select"
         onChange={handleFilterChange}
       >
         <option value="all">All</option>

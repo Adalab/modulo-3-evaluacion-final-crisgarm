@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/CharacterDetail.scss";
+import character from "../images/rick-morty-link.png";
 import PropTypes from "prop-types";
 
 const CharacterDetail = (props) => {
@@ -33,18 +34,24 @@ const CharacterDetail = (props) => {
           <h2 className="article__container--title">{props.character.name}</h2>
           <p className="article__container--status">
             Status:
-            <i class={status}></i>
+            <i className={`icon ${status}`}></i>
           </p>
           <p className="article__container--species">
             Species:
-            <i class={species}></i>
+            <i className={`icon ${species}`}></i>
           </p>
           <p className="article__container--origin">{`Origin: ${props.character.origin}`}</p>
           <p className="article__container--episodes">{`Episodes: ${props.character.episodes.length}`}</p>
         </div>
       </article>
       <Link to="/" className="article__link">
-        Back home
+        <img
+          src={character}
+          alt="Rick and Morty"
+          title="Rick and Morty"
+          className="article__link--image"
+        />
+        Back to all characters
       </Link>
     </>
   );
