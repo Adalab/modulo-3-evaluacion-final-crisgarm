@@ -1,22 +1,27 @@
 {
   "files": {
-    "main.css": "./static/css/main.b4578ab2.chunk.css",
-    "main.js": "./static/js/main.8285e147.chunk.js",
-    "main.js.map": "./static/js/main.8285e147.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.27dd3a10.js",
-    "runtime-main.js.map": "./static/js/runtime-main.27dd3a10.js.map",
-    "static/js/2.0215cb8c.chunk.js": "./static/js/2.0215cb8c.chunk.js",
-    "static/js/2.0215cb8c.chunk.js.map": "./static/js/2.0215cb8c.chunk.js.map",
-    "static/js/3.6a4e2cbc.chunk.js": "./static/js/3.6a4e2cbc.chunk.js",
-    "static/js/3.6a4e2cbc.chunk.js.map": "./static/js/3.6a4e2cbc.chunk.js.map",
+    "main.css": "./static/css/main.98fc0d8a.chunk.css",
+    "main.js": "./static/js/main.1a33b402.chunk.js",
+    "main.js.map": "./static/js/main.1a33b402.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.ccfb3fc0.js",
+    "runtime-main.js.map": "./static/js/runtime-main.ccfb3fc0.js.map",
+    "static/js/2.83c9911c.chunk.js": "./static/js/2.83c9911c.chunk.js",
+    "static/js/2.83c9911c.chunk.js.map": "./static/js/2.83c9911c.chunk.js.map",
+    "static/js/3.e192a4e3.chunk.js": "./static/js/3.e192a4e3.chunk.js",
+    "static/js/3.e192a4e3.chunk.js.map": "./static/js/3.e192a4e3.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.b4578ab2.chunk.css.map": "./static/css/main.b4578ab2.chunk.css.map",
-    "static/js/2.0215cb8c.chunk.js.LICENSE.txt": "./static/js/2.0215cb8c.chunk.js.LICENSE.txt"
+    "static/css/main.98fc0d8a.chunk.css.map": "./static/css/main.98fc0d8a.chunk.css.map",
+    "static/js/2.83c9911c.chunk.js.LICENSE.txt": "./static/js/2.83c9911c.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "./static/media/background-planets.f050c110.jpg",
+    "static/media/logo-rick-morty.de13d484.png": "./static/media/logo-rick-morty.de13d484.png",
+    "static/media/rick-and-morty-theme-song-hd.27ec954d.mp3": "./static/media/rick-and-morty-theme-song-hd.27ec954d.mp3",
+    "static/media/rick-morty-link.f38322d8.png": "./static/media/rick-morty-link.f38322d8.png",
+    "static/media/rick-morty.bf56a1a0.png": "./static/media/rick-morty.bf56a1a0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.27dd3a10.js",
-    "static/js/2.0215cb8c.chunk.js",
-    "static/css/main.b4578ab2.chunk.css",
-    "static/js/main.8285e147.chunk.js"
+    "static/js/runtime-main.ccfb3fc0.js",
+    "static/js/2.83c9911c.chunk.js",
+    "static/css/main.98fc0d8a.chunk.css",
+    "static/js/main.1a33b402.chunk.js"
   ]
 }
