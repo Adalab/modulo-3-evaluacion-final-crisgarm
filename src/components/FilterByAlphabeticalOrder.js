@@ -7,14 +7,15 @@ const FilterByAlphabeticalOrder = (props) => {
   return (
     <>
       <label className="form__label" htmlFor="order">
-        Order by name:
+        <input
+          type="checkbox"
+          id="order"
+          name="order"
+          className="form__checkbox"
+          onChange={handleCheckInput}
+        />
+        Order by name
       </label>
-      <input
-        type="checkbox"
-        id="order"
-        name="order"
-        onChange={handleCheckInput}
-      />
     </>
   );
 };

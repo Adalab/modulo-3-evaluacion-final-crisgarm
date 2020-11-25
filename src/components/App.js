@@ -35,31 +35,42 @@ const App = () => {
     }
   };
 
+  // FUNCTIONS
+
+  // function to filter by name at input text
+  function filterByName(character) {
+    return character.name.toLowerCase().includes(nameFilter.toLowerCase());
+  }
+
+  // function to filter by specie
+  function filterBySpecie(character) {
+    return speciesFilter === "all"
+      ? true
+      : character.species.toLowerCase() === speciesFilter;
+  }
+
+  // function to sort characters by alphabetical order
+  function sortCharacters(prev, next) {
+    if (prev.name > next.name) {
+      return 1;
+    }
+    if (prev.name < next.name) {
+      return -1;
+    }
+    return 0;
+  }
+
   // RENDER
   const filteredCharacters = characters
-    .filter((character) => {
-      return character.name.toLowerCase().includes(nameFilter.toLowerCase());
-    })
-    .filter((character) => {
-      return speciesFilter === "all"
-        ? true
-        : character.species.toLowerCase() === speciesFilter;
-    });
-  const newCharacters = [...characters];
+    .filter(filterByName)
+    .filter(filterBySpecie);
+
+  let newCharacters;
   if (orderFilter) {
-    characters.sort(function (prev, next) {
-      if (prev.name > next.name) {
-        return 1;
-      }
-      if (prev.name < next.name) {
-        return -1;
-      }
-      return 0;
-    });
+    newCharacters = filteredCharacters.sort(sortCharacters);
   } else {
-    const characters = [...newCharacters];
+    newCharacters = filteredCharacters;
   }
-  console.log(newCharacters, characters);
 
   const renderCharacterDetail = (props) => {
     const findCharacter = characters.find((character) => {
@@ -82,7 +93,7 @@ const App = () => {
               handleCheckInput={handleCheckInput}
             />
             <section>
-              <CharacterList characters={filteredCharacters} />
+              <CharacterList characters={newCharacters} />
             </section>
           </Route>
           <Route path="/character/:id" render={renderCharacterDetail} />

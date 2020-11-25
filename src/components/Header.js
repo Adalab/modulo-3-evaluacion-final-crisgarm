@@ -5,7 +5,12 @@ import "../stylesheets/Header.scss";
 const Header = () => {
   return (
     <header className="header">
-      <img src={logo} className="header__image" />
+      <img
+        src={logo}
+        alt="Logo de Rick and Morty"
+        title="Logo de Rick and Morty"
+        className="header__image"
+      />
     </header>
   );
 };
