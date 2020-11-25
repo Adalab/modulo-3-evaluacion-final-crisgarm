@@ -37,7 +37,7 @@ const App = () => {
 
   // FUNCTIONS
 
-  // function to filter by name at input text
+  // function to filter by name
   function filterByName(character) {
     return character.name.toLowerCase().includes(nameFilter.toLowerCase());
   }

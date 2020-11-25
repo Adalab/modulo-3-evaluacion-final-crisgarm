@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/Characters.scss";
+import PropTypes from "prop-types";
 
 const CharacterCard = (props) => {
   return (
@@ -17,6 +18,19 @@ const CharacterCard = (props) => {
       </Link>
     </>
   );
+};
+
+CharacterCard.defaultProps = {
+  name: "Unknown character",
+  image:
+    "https://raw.githubusercontent.com/Adalab/rick-y-morty/master/assets/img/19.jpeg",
+  species: "Unknown",
+};
+
+CharacterCard.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string,
+  species: PropTypes.string,
 };
 
 export default CharacterCard;

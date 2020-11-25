@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/CharacterDetail.scss";
+import PropTypes from "prop-types";
 
 const CharacterDetail = (props) => {
   let status;
@@ -49,4 +50,18 @@ const CharacterDetail = (props) => {
   );
 };
 
+CharacterDetail.defaultProps = {
+  name: "Unknown character",
+  image:
+    "https://raw.githubusercontent.com/Adalab/rick-y-morty/master/assets/img/19.jpeg",
+  origin: "Unknown",
+  episodes: "Unknown",
+};
+
+CharacterDetail.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string,
+  origin: PropTypes.string,
+  episodes: PropTypes.number,
+};
 export default CharacterDetail;
