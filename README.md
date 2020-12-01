@@ -23,12 +23,17 @@ Vamos a implementar una nueva funcionalidad: al hacer clic sobre la tarjeta de u
 
 ### 4. Bonus:
 
-- Si estando en el campo de filtrado pulsamos intro debéis impedir que el navegador navegue o cambie la ruta sin querer.
-  -Si se busca por un texto por ejemplo "XXX" y no hay ningún personaje que coincida con dicho texto se debe mostrar un mensaje del tipo "No hay ningún personaje que coincida con la palabra XXX".
-- El filtro debe filtrar independientemente de que la usuaria introduzca el texto en mayúsuclas o minúsculas.
-- Mostrar la especie y si un personajes está muerto con un icono.
-- Que funcione bien el responsive en dispositivos pequeños.
+- Impedir que el navegador envíe una petición o cambie de ruta al dar a intro sobre el campo de texto vacío aplicando un prevent event default.
+- Mostrar un mensaje de error si no hay ningún personaje que coincida con la búsqueda realizada.
+- Filtar independientemente de que el texto introducido esté en mayúsuclas o minúsculas.
+- Mostrar la especie y el estado de un personaje con un icono.
+- Al entrar en el detalle de un personaje y volver al listado de personajes, se debe poder leer el texto que se había incluido inicialmente en el campo de texto.
+- Posibilidad de filtrar por la especie del personaje.
 - Ordenar el listado de personajes alfabéticamente por nombre.
+- Añadir audio a la página.
+- Añadir un loading.
+- Añadir un loading mientras se carga la petición a la api.
+- Añadir la música de Rick and Morty.
 
 ## Previsualización aplicación
 
