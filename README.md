@@ -29,6 +29,10 @@ Vamos a implementar una nueva funcionalidad: al hacer clic sobre la tarjeta de u
 - Que funcione bien el responsive en dispositivos pequeños.
 - Ordenar el listado de personajes alfabéticamente por nombre.
 
-## Previsualización:
+## Previsualización aplicación
 
-<img alt="Previsualización aplicación" title="Previsualización aplicación" src="/images/proyecto-evaluacion-final.PNG"/>
+<img alt="Previsualización aplicación" title="Previsualización aplicación" src="src/images/proyecto-evaluacion-final.PNG" width=620px/>
+
+## Previsualización detalle tarjeta
+
+<img alt="Previsualización detalle tarjeta" title="Previsualización detalle tarjeta" src="src/images/proyecto-evaluacion-final-detalle.PNG" width=620px/>
