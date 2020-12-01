@@ -1,8 +1,12 @@
 # Buscador de personajes de Rick and Morty
 
-Este es el ejercicio de la evaluación final del módulo 03 de Adalab. El ejercicio consiste en desarrollar una página web con un listado de personajes de Rick and Morty, que podemos filtrar por el nombre del personaje. Vamos a usar React para realizarlo.
+<img alt="Gif de Rick" src="https://media.giphy.com/media/js0dt5JLCU01bvlt7d/giphy.gif" width=620px/>
 
-## Pasos para realizar el ejercicio:
+## Objetivo
+
+Este es el ejercicio de la evaluación final del módulo 03 de Adalab. El ejercicio consiste en desarrollar una página web con un listado de personajes de Rick and Morty, pudiendo filtrar por el nombre del personaje y acceder a una ficha con los detalles de cada uno. Hemos usado el framework React para su realización.
+
+## Desarrollo
 
 #### 1. Pintar el listado de personajes haciendo una petición a una api:
 
