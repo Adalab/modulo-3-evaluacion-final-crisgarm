@@ -1,8 +1,10 @@
 # Buscador de personajes de Rick and Morty
+<img alt="Gif de Rick" src="https://media.giphy.com/media/js0dt5JLCU01bvlt7d/giphy.gif" width=620px/>
 
-Este es el ejercicio de la evaluación final del módulo 03 de Adalab. El ejercicio consiste en desarrollar una página web con un listado de personajes de Rick and Morty, que podemos filtrar por el nombre del personaje. Hemos usado el framework React para su realización.
+## Objetivo
+Este es el ejercicio de la evaluación final del módulo 03 de Adalab. El ejercicio consiste en desarrollar una página web con un listado de personajes de Rick and Morty, pudiendo filtrar por el nombre del personaje y acceder a una ficha con los detalles de cada uno. Hemos usado el framework React para su realización.
 
-## Pasos la realización del ejercicio:
+## Desarrollo
 
 #### 1. Pintar el listado de personajes haciendo una petición a una api:
 En primer lugar, hemos utilizado el servicio de  https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json que nos devuelve información sobre los primeros 20 personajes de la serie. Sobre cada uno, hemos pintado el nombre, la foto y la especie.
@@ -14,12 +16,14 @@ Ahora que ya tenemos el listado de personajes en pantalla, la segunda parte cons
 Hemos implementado una nueva funcionalidad: al hacer clic sobre la tarjeta de un personaje, su información aparece a pantalla completa. Para hacer esto hemos usado rutas y React router. En la pantalla de detalle aparece además de la foto, nombre y especie, el planeta de origen, el número de episodios en los que aparece y si está vivo o muerto.
 
 #### 4. Bonus que hemos realizado:
-- Si estando en el campo de filtrado pulsamos intro debéis impedir que el navegador navegue o cambie la ruta sin querer.
-- Si se busca por un texto por ejemplo "XXX" y no hay ningún personaje que coincida con dicho texto se debe mostrar un mensaje del tipo "No hay ningún personaje que coincida con la palabra XXX".
-- El filtro debe filtrar independientemente de que la usuaria introduzca el texto en mayúsuclas o minúsculas.
-- Mostrar la especie y si un personajes está muerto con un icono.
-- El filtro debe filtrar independientemente de que la usuaria introduzca el texto en mayúsuclas o minúsculas.
-- Al entrar en el detalle de un personaje y a continuación pulsar atrás, el campo de texto debe mostrar el texto que tenía anteriormente
+- Impedir que el navegador envíe una petición o cambie de ruta al dar a intro sobre el campo de texto vacío aplicando un prevent event default.
+- Mostrar un mensaje de error si no hay ningún personaje que coincida con la búsqueda realizada.
+- Filtar independientemente de que el texto introducido esté en mayúsuclas o minúsculas.
+- Mostrar la especie y el estado de un personaje con un icono.
+- Al entrar en el detalle de un personaje y volver al listado de personajes, se debe poder leer el texto que se había incluido inicialmente en el campo de texto.
+- Posibilidad de filtrar por la especie del personaje.
 - Ordenar el listado de personajes alfabéticamente por nombre.
-- Añadir audio a la página.
-- Añadir un loading.
+- Añadir un loading mientras se carga la petición a la api.
+- Añadir la música de Rick and Morty.
+
+## Previsualización
