@@ -5,7 +5,7 @@
 Este es el ejercicio de la **evaluación final del módulo 03 de Adalab**. El ejercicio consiste en desarrollar una página web con un listado de personajes de Rick and Morty, pudiendo filtrar por el nombre del personaje y acceder a una ficha con los detalles de cada uno. Hemos usado el framework **React** para su realización.
 
 ## Demo
-Para ver el funcionamiento de la aplicación puedes visitar el siguiente enlace: https://beta.adalab.es/modulo-3-evaluacion-final-crisgarm/#/
+Para ver el funcionamiento de la aplicación puedes visitar el siguiente enlace: https://crisgarm.github.io/rick-morty-characters-finder/#/
 
 ## Desarrollo
 
